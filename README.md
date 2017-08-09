@@ -6,6 +6,10 @@ laravel-admin-ext/backup
 
 An admin interface for managing backups, inspired by https://github.com/laravel-backpack/backupmanager.
 
+## Screenshot
+
+![wx20170809-165225](https://user-images.githubusercontent.com/1479100/29113257-25a9904e-7d23-11e7-95e0-e85d37f79fdd.png)
+
 ## Installation
 
 > Before installing this package, you must install [laravel-backup](https://github.com/spatie/laravel-backup) and complete the configuration.
