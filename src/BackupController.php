@@ -33,6 +33,7 @@ class BackupController
      * Download a backup zip file.
      *
      * @param Request $request
+     *
      * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\BinaryFileResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function download(Request $request)
@@ -67,13 +68,12 @@ class BackupController
             $output = Artisan::output();
 
             return response()->json([
-                'status' => true,
+                'status'  => true,
                 'message' => $output,
             ]);
-
         } catch (\Exception $e) {
             return response()->json([
-                'status' => false,
+                'status'  => false,
                 'message' => $e->getMessage(),
             ]);
         }
@@ -83,6 +83,7 @@ class BackupController
      * Delete a backup file.
      *
      * @param Request $request
+     *
      * @return \Illuminate\Http\JsonResponse
      */
     public function delete(Request $request)
@@ -94,13 +95,13 @@ class BackupController
             $disk->delete($file);
 
             return response()->json([
-                'status' => true,
+                'status'  => true,
                 'message' => trans('admin.delete_succeeded'),
             ]);
         }
 
         return response()->json([
-            'status' => false,
+            'status'  => false,
             'message' => trans('admin.delete_failed'),
         ]);
     }
