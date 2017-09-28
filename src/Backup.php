@@ -21,7 +21,6 @@ class Backup extends Extension
         })->all();
 
         foreach ($statuses as $index => $status) {
-
             $name = $status->backupDestination()->backupName();
 
             $files = array_map('basename', $status->backupDestination()->disk()->allFiles($name));
