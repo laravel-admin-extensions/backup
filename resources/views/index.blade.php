@@ -119,7 +119,7 @@ $(function () {
                             <!-- Emphasis label -->
 
                             <div class="tools">
-                                <a href="{{ route('backup-download', ['disk' => $backup[1], 'file' => $backup[0].'/'.$file]) }}"><i class="fa fa-download"></i></a>
+                                <a target="_blank" href="{{ route('backup-download', ['disk' => $backup[1], 'file' => $backup[0].'/'.$file]) }}"><i class="fa fa-download"></i></a>
                                 <a href="{{ route('backup-delete', ['disk' => $backup[1], 'file' => $backup[0].'/'.$file]) }}" class="backup-delete"><i class="fa fa-trash-o"></i></a>
                             </div>
                         </li>
