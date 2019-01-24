@@ -12,7 +12,7 @@ class Backup extends Extension
 {
     public function getExists()
     {
-        $statuses = BackupDestinationStatusFactory::createForMonitorConfig(config('backup.monitorBackups'));
+        $statuses = BackupDestinationStatusFactory::createForMonitorConfig(config('backup.monitor_backups'));
 
         $listCommand = new ListCommand();
 
