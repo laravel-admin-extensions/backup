@@ -67,7 +67,7 @@ class BackupController
 
             $output = Artisan::output();
 
-            //修复可能的编码错误 修复时间：2019.4.21 盖志鑫
+            //Fixed a possible coding error
             $encoding = mb_detect_encoding($output,['ASCII','GB2312','GBK','UTF-8'],true);
 
             if ($encoding !== false && $encoding != 'UTF-8'){
