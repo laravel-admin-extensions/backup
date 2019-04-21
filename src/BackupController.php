@@ -67,6 +67,13 @@ class BackupController
 
             $output = Artisan::output();
 
+            //修复可能的编码错误 修复时间：2019.4.21 盖志鑫
+            $encoding = mb_detect_encoding($output,['ASCII','GB2312','GBK','UTF-8'],true);
+
+            if ($encoding !== false && $encoding != 'UTF-8'){
+                $output = mb_convert_encoding($output, 'UTF-8', $encoding);
+            }
+
             return response()->json([
                 'status'  => true,
                 'message' => $output,
