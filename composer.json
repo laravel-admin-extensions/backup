@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-ext/backup",
+    "name": "vonsogt/laravel-admin-ext/backup",
     "description": "Backup extension for laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "backup"],
