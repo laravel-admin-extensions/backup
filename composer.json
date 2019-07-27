@@ -1,9 +1,9 @@
 {
-    "name": "vonsogt/laravel-admin-ext/backup",
+    "name": "vonsogt//backup",
     "description": "Backup extension for laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "backup"],
-    "homepage": "https://github.com/laravel-admin-extensions/backup",
+    "homepage": "https://github.com/vonsogt/backup",
     "license": "MIT",
     "authors": [
         {
