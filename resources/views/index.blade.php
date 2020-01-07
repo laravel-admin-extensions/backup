@@ -94,7 +94,6 @@ $(function () {
                 <th>Name</th>
                 <th>Disk</th>
                 <th>Reachable</th>
-                <th>Healthy</th>
                 <th># of backups</th>
                 <th>Newest backup</th>
                 <th>Used storage</th>
@@ -105,13 +104,12 @@ $(function () {
                 <td>{{ $backup[0] }}</td>
                 <td>{{ $backup[1] }}</td>
                 <td>{{ $backup[2] }}</td>
-                <td>{{ $backup[3] }}</td>
                 <td>{{ $backup['amount'] }}</td>
                 <td>{{ $backup['newest'] }}</td>
                 <td>{{ $backup['usedStorage'] }}</td>
             </tr>
             <tr class="collapse" id="trace-{{$index+1}}">
-                <td colspan="8">
+                <td colspan="7">
                     <ul class="todo-list ui-sortable">
                         @foreach($backup['files'] as $file)
                         <li>
