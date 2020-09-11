@@ -102,13 +102,13 @@ $(function () {
             @foreach($backups as $index => $backup)
             <tr data-toggle="collapse" data-target="#trace-{{$index+1}}" style="cursor: pointer;">
                 <td>{{ $index+1 }}.</td>
-                <td>{{ $backup[0] }}</td>
-                <td>{{ $backup[1] }}</td>
-                <td>{{ $backup[2] }}</td>
-                <td>{{ $backup[3] }}</td>
-                <td>{{ $backup['amount'] }}</td>
-                <td>{{ $backup['newest'] }}</td>
-                <td>{{ $backup['usedStorage'] }}</td>
+                <td>{{ @$backup[0] }}</td>
+                <td>{{ @$backup[1] }}</td>
+                <td>{{ @$backup[2] }}</td>
+                <td>{{ @$backup[3] }}</td>
+                <td>{{ @$backup['amount'] }}</td>
+                <td>{{ @$backup['newest'] }}</td>
+                <td>{{ @$backup['usedStorage'] }}</td>
             </tr>
             <tr class="collapse" id="trace-{{$index+1}}">
                 <td colspan="8">
