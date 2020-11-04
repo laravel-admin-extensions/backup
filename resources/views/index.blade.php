@@ -103,9 +103,9 @@ $(function () {
             <tr data-toggle="collapse" data-target="#trace-{{$index+1}}" style="cursor: pointer;">
                 <td>{{ $index+1 }}.</td>
                 <td>{{ @$backup[0] }}</td>
+                <td>{{ @$backup['disk'] }}</td>
                 <td>{{ @$backup[1] }}</td>
                 <td>{{ @$backup[2] }}</td>
-                <td>{{ @$backup[3] }}</td>
                 <td>{{ @$backup['amount'] }}</td>
                 <td>{{ @$backup['newest'] }}</td>
                 <td>{{ @$backup['usedStorage'] }}</td>
@@ -119,8 +119,8 @@ $(function () {
                             <!-- Emphasis label -->
 
                             <div class="tools">
-                                <a target="_blank" href="{{ route('backup-download', ['disk' => $backup[1], 'file' => $backup[0].'/'.$file]) }}"><i class="fa fa-download"></i></a>
-                                <a href="{{ route('backup-delete', ['disk' => $backup[1], 'file' => $backup[0].'/'.$file]) }}" class="backup-delete"><i class="fa fa-trash-o"></i></a>
+                                <a target="_blank" href="{{ route('backup-download', ['disk' => $backup['disk'], 'file' => $backup[0].'/'.$file]) }}"><i class="fa fa-download"></i></a>
+                                <a href="{{ route('backup-delete', ['disk' => $backup['disk'], 'file' => $backup[0].'/'.$file]) }}" class="backup-delete"><i class="fa fa-trash-o"></i></a>
                             </div>
                         </li>
                         @endforeach
