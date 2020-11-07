@@ -25,7 +25,8 @@ class Backup extends Extension
 
             $files = array_map('basename', $status->backupDestination()->disk()->allFiles($name));
 
-            $rows[$index]['files'] = array_slice(array_reverse($files), 0, 30);
+            $rows[$index]['disk'] = strip_tags($rows[$index]['disk']);
+	    $rows[$index]['files'] = array_slice(array_reverse($files), 0, 30);
         }
 
         return $rows;
